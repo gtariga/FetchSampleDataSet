@@ -1,0 +1,18 @@
+When considering average spend from receipts with 'rewardsReceiptStatus’ of ‘Accepted’ or ‘Rejected’, which is greater?
+SELECT
+	rewardsReceiptStatus
+	AVG(totalSpent)
+FROM
+	Reciepts
+GROUP BY
+	rewardsReceiptStatus
+	
+
+When considering total number of items purchased from receipts with 'rewardsReceiptStatus’ of ‘Accepted’ or ‘Rejected’, which is greater?
+SELECT
+	rewardsReceiptStatus
+	SUM(purchasedItemCount)
+FROM
+	Reciepts
+GROUP BY
+	rewardsReceiptStatus
